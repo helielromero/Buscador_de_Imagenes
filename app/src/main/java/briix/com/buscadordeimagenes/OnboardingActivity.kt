@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import briix.com.buscadordeimagenes.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected {
+class OnboardingActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected {
 
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
