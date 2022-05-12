@@ -1,4 +1,4 @@
-package briix.com.buscadordeimagenes
+package briix.com.buscadordeimagenes.onboarding
 
 data class Board(
     val fondo: Int,
