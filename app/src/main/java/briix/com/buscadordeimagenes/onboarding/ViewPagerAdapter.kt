@@ -1,4 +1,4 @@
-package briix.com.buscadordeimagenes
+package briix.com.buscadordeimagenes.onboarding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
