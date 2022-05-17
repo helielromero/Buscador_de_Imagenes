@@ -52,7 +52,7 @@ class OnboardingActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected 
             descripcion = "",
         ),
         Board(
-            fondo = R.color.secondaryColor,
+            fondo = R.color.primaryColor,
             imagen = R.drawable.ic_comenzar,
             titulo = "Estas listo!!!",
             descripcion = "Comenzar!!!!",
