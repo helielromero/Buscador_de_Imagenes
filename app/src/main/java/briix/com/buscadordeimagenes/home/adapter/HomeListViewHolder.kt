@@ -8,21 +8,19 @@ import briix.com.buscadordeimagenes.home.PhotosDataModel
 
 class HomeListViewHolder (view:View):RecyclerView.ViewHolder(view) {
 
-    val binding= HomeItemBinding.bind(view)
+    private val binding= HomeItemBinding.bind(view)
 
-
-    fun render (entidad: PhotosDataModel){
-        binding.imgPhoto.setImageResource(entidad.imagePhoto)
-        binding.tvName.text = entidad.name
-        binding.tvDescripcion.text = entidad.description
-        binding.tvId.text = entidad.link
+    fun render (entity: PhotosDataModel){
+        binding.imgPhoto.setImageResource(entity.imagePhoto)
+        binding.tvName.text = entity.name
+        binding.tvDescription.text = entity.description
+        binding.tvId.text = entity.link
 
         itemView.setOnClickListener {
             Toast.makeText(
             binding.imgPhoto.context,
-            entidad.name,
+            entity.name,
             Toast.LENGTH_SHORT
         ).show() }
-
     }
 }

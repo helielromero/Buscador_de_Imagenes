@@ -34,28 +34,28 @@ class OnboardingActivity : AppCompatActivity(), ViewPagerAdapter.OnItemSelected 
 
     private fun getList() = listOf(
         Board(
-            fondo = R.color.primaryColor,
-            imagen = R.drawable.storefront,
-            titulo = "Bienvenido",
-            descripcion = "Te damos la bienvenida a la app imagenes al azar ",
+            bottom = R.color.primaryColor,
+            image = R.drawable.storefront,
+            title = "Bienvenido",
+            description = "Te damos la bienvenida a la app imagenes al azar ",
         ),
         Board(
-            fondo = R.color.primaryColor,
-            imagen = R.drawable.ic_imagen,
-            titulo = "Imagenes",
-            descripcion = "En esta aplicacion podras buscar imagenes de cualquier tipo.",
+            bottom = R.color.primaryColor,
+            image = R.drawable.ic_imagen,
+            title = "Imagenes",
+            description = "En esta aplicacion podras buscar imagenes de cualquier tipo.",
         ),
         Board(
-            fondo = R.color.primaryColor,
-            imagen = R.drawable.ic_descargar,
-            titulo = "Podras descargar las imagenes que te gusten o darles me gusta.",
-            descripcion = "",
+            bottom = R.color.primaryColor,
+            image = R.drawable.ic_descargar,
+            title = "Podras descargar las imagenes que te gusten o darles me gusta.",
+            description = "",
         ),
         Board(
-            fondo = R.color.primaryColor,
-            imagen = R.drawable.ic_comenzar,
-            titulo = "Estas listo!!!",
-            descripcion = "Comenzar!!!!",
+            bottom = R.color.primaryColor,
+            image = R.drawable.ic_comenzar,
+            title = "Estas listo!!!",
+            description = "Comenzar!!!!",
         )
     )
 }

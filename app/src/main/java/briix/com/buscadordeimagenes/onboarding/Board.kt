@@ -1,8 +1,8 @@
 package briix.com.buscadordeimagenes.onboarding
 
 data class Board(
-    val fondo: Int,
-    val imagen: Int,
-    val titulo: String,
-    val descripcion: String
+    val bottom: Int,
+    val image: Int,
+    val title: String,
+    val description: String
 )

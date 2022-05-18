@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation" >
     <string name="app_name">Buscador de Imagenes</string>
-    <string name="imagen" translatable="false">Imagen</string>
+    <string name="image" translatable="false">Imagen</string>
     <string name="siguiente">siguiente</string>
 </resources>

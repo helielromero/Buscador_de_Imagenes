@@ -19,11 +19,12 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/image" />
 
     <TextView
         android:id="@+id/tvName"
-        tools:text="nombre"
+        tools:text="name"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="21sp"
         android:textStyle="bold"
@@ -34,8 +35,8 @@
         app:layout_constraintStart_toEndOf="@+id/imgPhoto" />
 
     <TextView
-        android:id="@+id/tvDescripcion"
-        tools:text="Descripcion"
+        android:id="@+id/tvDescription"
+        tools:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
@@ -43,13 +44,11 @@
 
     <TextView
         android:id="@+id/tvId"
-        tools:text="link de la imagen"
+        tools:text="link de la image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
         app:layout_constraintStart_toEndOf="@+id/imgPhoto" />
-
-
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

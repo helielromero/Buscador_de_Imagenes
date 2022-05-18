@@ -22,10 +22,9 @@ class HomeActivity : AppCompatActivity() {
         initRecyclerView()
     }
 
-    fun initRecyclerView(){
+   private fun  initRecyclerView(){
         val manager= LinearLayoutManager(this)
-
         binding.listView.layoutManager= manager
         binding.listView.adapter= HomeListAdapter(Home.imageList)
-    }
+   }
 }
