@@ -7,7 +7,6 @@ import briix.com.buscadordeimagenes.onboarding.OnboardingActivity
 
 class SplashActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val intent = Intent(this, OnboardingActivity::class.java)
