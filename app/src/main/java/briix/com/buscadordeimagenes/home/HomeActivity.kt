@@ -26,6 +26,6 @@ class HomeActivity : AppCompatActivity() {
         val manager= LinearLayoutManager(this)
 
         binding.listView.layoutManager= manager
-        binding.listView.adapter= HomeListAdapter(HomeList.imagenList)
+        binding.listView.adapter= HomeListAdapter(Home.imageList)
     }
 }
