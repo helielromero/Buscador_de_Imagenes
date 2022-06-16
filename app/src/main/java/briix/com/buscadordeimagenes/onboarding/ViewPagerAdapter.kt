@@ -47,7 +47,6 @@ class ViewPagerAdapter(
             bottom.setOnClickListener {
                 onItemSelected?.onClickListener(adapterPosition)
             }
-
         }
     }
 
