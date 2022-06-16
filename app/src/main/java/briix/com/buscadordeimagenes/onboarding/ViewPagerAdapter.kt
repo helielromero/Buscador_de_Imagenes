@@ -1,4 +1,4 @@
-package briix.com.buscadordeimagenes
+package briix.com.buscadordeimagenes.onboarding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,6 @@ class ViewPagerAdapter(
     private val boardList: List<Board>,
     private val onItemSelected: OnItemSelected? = null
 ) : RecyclerView.Adapter<ViewPagerAdapter.BoardViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BoardViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -29,23 +28,23 @@ class ViewPagerAdapter(
         private val onItemSelected: OnItemSelected? = null
     ): RecyclerView.ViewHolder(binding.root) {
 
-        private val contenedor = binding.container
-        private val imagen = binding.imageView
-        private val titulo = binding.textViewTitulo
-        private val descripcion = binding.textViewDescripcion
-        private val boton = binding.bottomSiguinte
+        private val container = binding.container
+        private val image = binding.imageView
+        private val title = binding.textViewTitle
+        private val description= binding.textViewDescription
+        private val bottom = binding.bottomSiguiente
 
         fun bind(board: Board) = with(binding) {
-            container.background = ContextCompat.getDrawable(root.context,board.fondo)
-            imageView.setImageResource(board.imagen)
-            titulo.text = board.titulo
-            descripcion.text = board.descripcion
+            container.background = ContextCompat.getDrawable(root.context,board.bottom)
+            imageView.setImageResource(board.image)
+            title.text = board.title
+            description.text = board.description
 
             if (adapterPosition.equals(boardList.size-1)){
-                boton.text = "finalizar"
+                bottom.text = "finalizar"
             }
 
-            boton.setOnClickListener {
+            bottom.setOnClickListener {
                 onItemSelected?.onClickListener(adapterPosition)
             }
 
