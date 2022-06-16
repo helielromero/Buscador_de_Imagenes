@@ -9,46 +9,49 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp">
 
+
   <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imgPhoto"
-        tools:background="@color/black"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/image" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/black" />
 
     <TextView
         android:id="@+id/tvName"
-        tools:text="name"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPhoto"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgPhoto" />
+        tools:text="name" />
 
     <TextView
         android:id="@+id/tvDescription"
-        tools:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imgPhoto"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
-        app:layout_constraintStart_toEndOf="@+id/imgPhoto" />
+        tools:text="Description" />
 
     <TextView
         android:id="@+id/tvId"
-        tools:text="link de la image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imgPhoto"
         app:layout_constraintTop_toBottomOf="@+id/tvDescription"
-        app:layout_constraintStart_toEndOf="@+id/imgPhoto" />
+        tools:text="link de la image" />
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

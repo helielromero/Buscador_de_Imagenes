@@ -32,8 +32,4 @@ open class HomeItem @JvmOverloads constructor(
                 Toast.LENGTH_SHORT
             ).show() }
     }
-
-
-
-
 }

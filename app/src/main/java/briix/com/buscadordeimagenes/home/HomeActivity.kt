@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import briix.com.buscadordeimagenes.R
 import briix.com.buscadordeimagenes.databinding.ActivityHomeBinding
 import briix.com.buscadordeimagenes.home.adapter.DeleteItem
+import briix.com.buscadordeimagenes.home.adapter.ExpandableHeaderItem
 import briix.com.buscadordeimagenes.home.adapter.HomeItem
 import briix.com.buscadordeimagenes.home.decoration.SwipeTouchCallback
+import com.xwray.groupie.ExpandableGroup
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.TouchCallback
 
@@ -21,9 +23,6 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var groupAdapter: GroupieAdapter
     private val imageList: List<PhotosDataModel> by lazy {  Home.imageList }
-    // datos =[1,,2,3,4..]
-    // item = [Item[1], Item[2],Item[3]...]
-    //gropieAdapter = items
 
     private var items: List<HomeItem> = Home.imageList.map { HomeItem(it) }
 
@@ -33,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
 
         setContentView(binding.root)
         initRecyclerView()
-        createItems()
+        //createItems()
     }
 
     private fun createItems()  {
@@ -50,9 +49,15 @@ class HomeActivity : AppCompatActivity() {
         binding.listView.also {
             ItemTouchHelper(touchCallback).attachToRecyclerView(it)
         }
-        groupAdapter.update(items)
+        val item: ExpandableHeaderItem = ExpandableHeaderItem()
+        groupAdapter.add(ExpandableGroup(item).apply {
 
-
+            imageList.forEach {
+                val item = HomeItem(it)
+                add(item)
+            }
+        })
+        //groupAdapter.update(items)
     }
 
     private val touchCallback: TouchCallback by lazy {
